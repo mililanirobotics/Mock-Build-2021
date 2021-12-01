@@ -27,4 +27,22 @@ class Robot : public frc::TimedRobot {
   const std::string kAutoNameDefault = "Default";
   const std::string kAutoNameCustom = "My Auto";
   std::string m_autoSelected;
+
+//Declaration of flywheel motors
+
+TalonSRX flywheelMotorOne{1};
+TalonSRX flywheelMotorTwo{0};
+
+//Setting power to 0
+
+flywheelMotorOne.set(0);
+flywheelMotorTwo.set(0);
+
+//Declartion of flywheel motors activation variable 
+
+double activateFlywheelMotors;
+
+
 };
+
+
