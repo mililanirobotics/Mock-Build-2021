@@ -14,6 +14,13 @@ void Robot::RobotInit() {
   frc::SmartDashboard::PutData("Auto Modes", &m_chooser);
 }
 
+void Robot::setFollowers()
+{
+  
+  flywheelMotorTwo.Set(ControlMode::Follower, 1);
+
+}
+
 /**
  * This function is called every robot packet, no matter the mode. Use
  * this for items like diagnostics that you want ran during disabled,
@@ -56,7 +63,9 @@ void Robot::AutonomousPeriodic() {
   }
 }
 
-void Robot::TeleopInit() {}
+void Robot::TeleopInit() {
+  setFollowers();
+}
 
 void Robot::TeleopPeriodic() {}
 

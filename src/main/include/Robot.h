@@ -21,6 +21,7 @@ class Robot : public frc::TimedRobot {
   void DisabledPeriodic() override;
   void TestInit() override;
   void TestPeriodic() override;
+  void setFollowers();
 
  private:
   frc::SendableChooser<std::string> m_chooser;
@@ -35,12 +36,15 @@ TalonSRX flywheelMotorTwo{0};
 
 //Setting power to 0
 
+
 flywheelMotorOne.set(0);
 flywheelMotorTwo.set(0);
 
-//Declartion of flywheel motors activation variable 
+//Declaration of flywheel motors activation variable 
 
 double activateFlywheelMotors;
+
+
 
 
 };
